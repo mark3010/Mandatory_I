@@ -1,13 +1,14 @@
+// Config
+const port = 8080;
+const projName = "Mandatory I";
+
+// Api
+
 import express from "express";
-import path from "path";
 
 const app = express();
 
 app.use(express.static("public"))
-
-//app.get("/", (req, res) => {
-//    res.sendFile(path.resolve("./public/frontpage.html"));
-//});
 
 import { renderPage } from "./util/templateEngine.js";
 
@@ -37,8 +38,7 @@ const adminpage = renderPage("/contentCreation/contentCreation.html",
 
 
 app.get('/',(req,res) => {
-    res.send("frontpage");
-    //res.send(frontpage);
+    res.send(frontpage);
 })
 app.get('/content',(req,res) => {
     res.send(contentpage);
@@ -50,6 +50,13 @@ app.post('/admin',(req,res) => {
     res.send(adminpage);
 })
 
-app.listen(process.env.PORT || 8080, () => {
-    console.log("Listening on port 8080")
-})
+//app.listen(process.env.PORT || 8080, () => {
+//    console.log("Listening on port 8080")
+//})
+
+app.listen(process.env.PORT || port, (error) => {
+    if (error) {
+        console.log(error)
+    }
+    console.log("Your project: \"" + projName + "\" is up and running \nopen port: " + port);
+});
