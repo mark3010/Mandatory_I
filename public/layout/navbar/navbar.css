@@ -1,0 +1,25 @@
+.nav-bar {
+    background-color: #ccc;
+    display: flex;
+    justify-content: center;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 20px;
+  }
+
+ul li {
+    display: inline;
+    margin-right: 20px;
+    margin-left: 20px;
+}
+
+a:link {
+    color:black
+}
+
+a:hover {
+    color:blue
+}

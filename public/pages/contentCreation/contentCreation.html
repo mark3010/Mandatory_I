@@ -7,16 +7,28 @@
     <title>Frontpage</title>
 </head>
 <body>
-    <h1>
-        Create subject
-    </h1>
-    <form action="/admin/edit" method="POST">
-            <label for>Subject title</label>
-            <input id="title" placeholder="title">
-        
-            <label for>Content</label>
-            <textarea id="content" placeholder="content" cols="60" rows="20"></textarea>
-        <button type="submit">Log in</button>
-    </form>
+    <div class="content">
+            <div class="column">
+                <div class="title">
+                <h1>
+                    Create subject
+                </h1>
+
+                <form action="/admin/edit" method="POST">
+                    <div class="column">
+                        <label for>Subject title</label>
+                        <input id="title" placeholder="title" style="width: 200px; margin:auto">
+
+                        <label for>Subject type </label>
+                        <input id="type" placeholder="type" style="width: 200px; margin:auto">
+                    
+                        <label for>Content</label>
+                        <textarea id="content" placeholder="content" cols="60" rows="20" style="margin:auto"></textarea>
+                        <button type="submit" style="width:200px; margin:auto">Submit</button>
+                    </div>
+                </form>
+                </div>
+            </div>
+        </div>
 </body>
 </html>

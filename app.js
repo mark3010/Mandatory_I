@@ -18,30 +18,49 @@ const frontpage = renderPage("/frontpage/frontpage.html",
         cssLink: `<link rel="stylesheet" href="/pages/frontpage/frontpage.css">`
     });
 
-const contentpage = renderPage("/content/content.html",
+//TODO: redefine all content pages into single template
+const nodepage = renderPage("/content/pages/node/node.html",
     {
+        contentTitle: "NodeJS",
         tabTitle: "Mandatory I / content",
-        cssLink: `<link rel="stylesheet" href="/pages/frontpage/frontpage.css">`
+        cssLink: `<link rel="stylesheet" href="/pages/content/nodecontent.css">`
     });
 
+const jspage = renderPage("/content/pages/js/js.html",
+    {
+        contentTitle: "Javascript",
+        tabTitle: "Mandatory I / content",
+        cssLink: `<link rel="stylesheet" href="/pages/content/content.css">`
+    });
+
+const toolspage = renderPage("/content/pages/tools/tools.html",
+    {
+        contentTitle: "Tools",
+        tabTitle: "Mandatory I / content",
+        cssLink: `<link rel="stylesheet" href="/pages/content/content.css">`
+    });    
 const loginpage = renderPage("/admin/admin.html",
     {
         tabTitle: "Mandatory I / login",
-        cssLink: `<link rel="stylesheet" href="/pages/frontpage/frontpage.css">`
     });
 
 const adminpage = renderPage("/contentCreation/contentCreation.html",
     {
         tabTitle: "Mandatory I / login",
-        cssLink: `<link rel="stylesheet" href="/pages/frontpage/frontpage.css">`
     });
 
 
 app.get('/',(req,res) => {
     res.send(frontpage);
 })
-app.get('/content',(req,res) => {
-    res.send(contentpage);
+app.get('/node',(req,res) => {
+    res.send(nodepage);
+})
+app.get('/js',(req,res) => {
+    res.send(jspage);
+})
+app.get('/tools',(req,res) => {
+    res.send(toolspage);
 })
 app.get('/admin',(req,res) => {
     res.send(loginpage);
@@ -49,10 +68,6 @@ app.get('/admin',(req,res) => {
 app.post('/admin',(req,res) => {
     res.send(adminpage);
 })
-
-//app.listen(process.env.PORT || 8080, () => {
-//    console.log("Listening on port 8080")
-//})
 
 app.listen(process.env.PORT || port, (error) => {
     if (error) {
