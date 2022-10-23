@@ -17,13 +17,16 @@
                 <form action="/admin/edit" method="POST">
                     <div class="column">
                         <label for>Subject title</label>
-                        <input id="title" placeholder="title" style="width: 200px; margin:auto">
+                        <input id="title" name="title"  placeholder="title" style="width: 200px; margin:auto">
 
                         <label for>Subject type </label>
-                        <input id="type" placeholder="type" style="width: 200px; margin:auto">
+                        <input id="type" name="type" placeholder="type" style="width: 200px; margin:auto">
                     
                         <label for>Content</label>
-                        <textarea id="content" placeholder="content" cols="60" rows="20" style="margin:auto"></textarea>
+                        <textarea id="content" name="content" placeholder="content" cols="60" rows="20" style="margin:auto"></textarea>
+
+                        <label for>Image</label>
+                        <input id="img" name="image" placeholder="link to image" style="width: 200px; margin:auto">
                         <button type="submit" style="width:200px; margin:auto">Submit</button>
                     </div>
                 </form>

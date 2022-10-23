@@ -10,6 +10,8 @@ const app = express();
 
 app.use(express.static("public"))
 
+app.use(express.urlencoded());
+
 import { renderPage } from "./util/templateEngine.js";
 
 const frontpage = renderPage("/frontpage/frontpage.html",
@@ -46,7 +48,7 @@ const loginpage = renderPage("/admin/admin.html",
 
 const adminpage = renderPage("/contentCreation/contentCreation.html",
     {
-        tabTitle: "Mandatory I / login",
+        tabTitle: "Mandatory I / admin",
     });
 
 
@@ -66,7 +68,12 @@ app.get('/admin',(req,res) => {
     res.send(loginpage);
 })
 app.post('/admin',(req,res) => {
-    res.send(adminpage);
+    // TODO: hardcoded password/account, implement real db with users and passwords later
+    if (req.body.password==="1234") {
+        res.send(adminpage);
+    } else {
+        res.send(loginpage);
+    }
 })
 
 app.listen(process.env.PORT || port, (error) => {

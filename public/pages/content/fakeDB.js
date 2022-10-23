@@ -67,15 +67,18 @@ fakeDB.push({
     title: "nodemon",
     type: "node",
     img: "https://i.gyazo.com/11bd5081984a0ced1a00dad292cbd580.png",
-    body: "nodemon is a useful tool when developing a node.js project. Nodemon allows you to run the server, make changes on the fly, and have the server rerun with the changes in realtime \
-    to run you project with nodemon you simply switch out 'node' with 'nodemon' when starting your project from the terminal. The terminal command should look like so:"
+    body: "nodemon is a useful tool when developing a node.js project. Nodemon allows you to run the server, make changes on the fly, and have the server rerun with the changes in realtime. \n\
+    \n\
+    Nodemon can be closed by pressing ctrl+c in the terminal, alternatively if you want to rerun the server while active, you can use the terminal command 'rs'.\n\
+    \n\
+    To run you project with nodemon you simply switch out 'node' with 'nodemon' when starting your project from the terminal. The terminal command should look like so:"
 });
 
 fakeDB.push({
     title: "postman",
     type: "tools",
     img: "https://i.gyazo.com/e65a92a92ee0a2ca17382e0e8c7d6187.png",
-    body: "postman is a tool to generate Http requests that is useful when testing out your api. Perhaps you have just finished an endpoint with its full functionality, but you dont have a fully functional frontend ready. In this case you could use Postman to generate whatever HTTP request you desire and see what the api responds."
+    body: "postman is a tool made to help you generate Http requests. Perhaps you have just finished an endpoint with its full functionality, but you dont have a fully functional frontend ready. In this case you could use Postman to generate whatever HTTP request you desire and see what the api responds."
 });
 
 fakeDB.push({
@@ -118,8 +121,17 @@ fakeDB.push({
 });
 
 fakeDB.push({
-    title: "import / export",
+    title: "import / export and require",
     type: "js",
     img: "https://i.gyazo.com/3c05505a11e732265d6a43015f647692.png",
-    body: "In javascript it is possible to use functions across multiple files. To do this we simply have to define a cariable, function or the like with the keyword \"export\" at the front. To import them elsewhere, simply declare the import statement beforehand. example:"
+    body: "In javascript it is possible to use functions across multiple files. Theres different ways to do this but it is common to use 'require'\n\
+    \n\
+    require:\n\
+    require basically reads a js file, executes it and then proceeds to return the export object. 'Require' is also part of what is referred to as CommonJS, a module formatting system, and also the standard for NodeJS\n\
+    \n\
+    import / export:\n\
+    the import statement is used to refer to ES modules. modules can be defined by using the 'export' signifier to create an ES module out of a function or the like. ES modules are the standard for javascript\n\
+    \n\
+    one of the main differences between require and import is that require can be used anywhere inside the program, whereas import cannot be conditional and is always run at the beginning of the file."
+
 });
