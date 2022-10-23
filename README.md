@@ -1,3 +1,3 @@
 # Mandatory_I
 
-To see this assignment hosted online, click [here](https://mfl-mandatory1.herokuapp.com/)
+To see the hosted version, click [here!](https://mfl-mandatory1.herokuapp.com/)
